@@ -28,7 +28,7 @@ public class WholeSalerServiceController {
      * @return message de validation de la demande du livre
      */
     @GetMapping("/wholesaler_service/command/{key}/{isbn}/{quantity}/{corr}")
-    public ResponseEntity<String> WholeSalerRequest(@PathVariable int key, @PathVariable String isbn, @PathVariable String quantity, @PathVariable String corr){
+    public ResponseEntity<String> WholeSalerRequest(@PathVariable int key, @PathVariable String isbn, @PathVariable int quantity, @PathVariable String corr){
         System.out.println("WholeSale order sent for the isbn : "+isbn + " quantite:  "+ quantity+ "corr : "+corr);
                 
         return ResponseEntity.ok("WholeSale order sent for the  isbn : "+isbn + " quantite:  "+ quantity+ "corr : "+corr);
