@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class WholeSalerServiceController {
     public WholeSalerServiceController() {
         
-    }   
+    }
+    
     /**
      * Cette méthode sert à faire une requête pour vérifier que le stock du livre est superieur 
      * @param key clef correspondant au compte du client
@@ -28,8 +29,8 @@ public class WholeSalerServiceController {
      */
     @GetMapping("/wholesaler_service/command/{key}/{isbn}/{quantity}/{corr}")
     public ResponseEntity<String> WholeSalerRequest(@PathVariable int key, @PathVariable String isbn, @PathVariable String quantity, @PathVariable String corr){
-        System.out.println("WholeSale order sent");
+        System.out.println("WholeSale order sent for the isbn : "+isbn + " quantite:  "+ quantity+ "corr : "+corr);
                 
-        return ResponseEntity.ok("WholeSale order sent isbn : "+isbn + " quantite:  "+ quantity);
+        return ResponseEntity.ok("WholeSale order sent for the  isbn : "+isbn + " quantite:  "+ quantity+ "corr : "+corr);
     }
 }
